@@ -1,56 +1,69 @@
-# AdventureWorks Sales Analytics Dashboard | Power BI
+<h1 align="center">📊 AdventureWorks Sales Analytics Dashboard</h1>
 
-This Power BI project analyzes AdventureWorks sales data using interactive dashboards, DAX measures, Power Query transformations, and a star schema data model.
+<p align="center">
+An interactive Business Intelligence dashboard built using <b>Microsoft Power BI</b> to analyze AdventureWorks sales data through data modeling, DAX, Power Query, and insightful visualizations.
+</p>
 
-## Overview
+<p align="center">
 
-This project demonstrates an end-to-end Business Intelligence solution developed using Microsoft Power BI.
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![DAX](https://img.shields.io/badge/DAX-005C9C?style=for-the-badge)
+![Power Query](https://img.shields.io/badge/Power_Query-217346?style=for-the-badge)
+![Data Modeling](https://img.shields.io/badge/Star_Schema-Data_Model-blue?style=for-the-badge)
+![Business Intelligence](https://img.shields.io/badge/Business_Intelligence-Analytics-success?style=for-the-badge)
 
-The report performs sales analysis on AdventureWorks data and showcases:
+</p>
 
-• Star Schema Data Modeling
+---
 
-• DAX Calculations
+# 📌 Project Overview
 
-• Power Query Transformations
+This project demonstrates an end-to-end Business Intelligence solution developed using **Microsoft Power BI**.
 
-• Interactive Dashboards
+The dashboard analyzes AdventureWorks sales data to uncover valuable business insights through interactive reports, data modeling, DAX calculations, and Power Query transformations.
 
-• Currency Conversion Analysis
+The solution follows BI best practices by implementing a **Star Schema**, reusable DAX measures, and dynamic filtering to enable effective decision-making.
 
-• Fiscal Year Analysis
+---
 
-• Dynamic Filtering
+# 🎯 Business Problem
 
-• ETL Concepts
+AdventureWorks operates across multiple countries and currencies. Business users require a centralized dashboard to monitor sales performance, compare yearly trends, analyze exchange rate impact, and explore product distribution.
 
-## Objectives
+This dashboard enables users to answer important business questions through interactive visualizations and dynamic reports.
 
-- Analyze sales performance
-- Track yearly product sales
-- Analyze exchange rate impact
-- Demonstrate Power Query transformations
+---
+
+# 🚀 Project Objectives
+
+- Analyze regional sales performance
+- Compare yearly product sales
+- Track product distribution across fiscal years
+- Analyze currency exchange rate impact
 - Build reusable DAX measures
+- Perform ETL transformations using Power Query
+- Design interactive business dashboards
 
-## Tech Stack
+---
 
-• Power BI
+# 🛠 Tech Stack
 
-• Power Query
+| Technology | Purpose |
+|------------|---------|
+| Microsoft Power BI | Dashboard Development |
+| Power Query (M) | Data Cleaning & Transformation |
+| DAX | Business Calculations |
+| Excel | Data Source |
+| Star Schema | Data Modeling |
 
-• DAX
+---
 
-• Excel
+# 📂 Dataset
 
-## Datasets
-- AdventureWorks Sales
-- Exchange Rates
-
-## Data Model
-
-Star Schema
+The project uses the **AdventureWorks** sample dataset.
 
 ### Fact Table
+
 - Sales
 
 ### Dimension Tables
@@ -62,116 +75,179 @@ Star Schema
 - Sales Territory
 - Currency Rate
 
+---
+
+# ⭐ Data Model
+
+The report follows a **Star Schema** design to improve query performance and simplify report development.
+
+```
+                Customer
+                    │
+                    │
+Product ─── Sales ─── Date
+                    │
+                    │
+        Sales Territory
+                    │
+                    │
+            Currency Rate
+                    │
+                    │
+              Reseller
+```
+
+---
+
+# 🔄 Project Workflow
+
+```
+AdventureWorks Dataset
+          │
+          ▼
+Power Query (ETL)
+          │
+          ▼
+Data Cleaning
+          │
+          ▼
+Star Schema Modeling
+          │
+          ▼
+DAX Measures
+          │
+          ▼
+Interactive Dashboards
+          │
+          ▼
+Business Insights
+```
+
+---
+
 # 📊 Dashboard Pages
 
 ---
 
-## 📄 Page 1 – Regional Sales Analysis
+# 📄 Page 1 — Regional Sales Analysis
 
-<img width="914" height="316" alt="image" src="https://github.com/user-attachments/assets/7e9b8319-9411-4f6f-b704-d309884101ca" />
+<img width="914" height="316" alt="Regional Sales Dashboard" src="https://github.com/user-attachments/assets/7e9b8319-9411-4f6f-b704-d309884101ca"/>
 
+## Objective
 
-### Objective
-Analyze sales performance across different countries and demonstrate DAX calculations for filtering and comparing regional sales.
+Analyze sales performance across different countries and compare regional sales using advanced DAX calculations.
 
 ### Features
+
 - Country-wise Sales Analysis
 - Matrix Visualization
 - Dynamic Country Filtering
-- Conditional Sales Calculations
 - Interactive Report Filters
+- Conditional Sales Calculations
 
-### DAX Used
+### DAX Functions Used
+
 ```DAX
 SUM()
+
 CALCULATE()
+
 FILTER()
+
 ALL()
+
 SELECTEDVALUE()
 ```
 
 ### Business Insight
-This report enables business users to compare sales across countries while dynamically excluding specific regions (such as Germany and the United Kingdom) using DAX. It demonstrates filter context manipulation and advanced analytical reporting.
+
+This dashboard enables users to compare sales across countries while dynamically excluding specific regions using DAX filter context manipulation.
 
 ---
 
-## 📄 Page 2 – Fiscal Year Product Analysis
+# 📄 Page 2 — Fiscal Year Product Analysis
 
-<img width="488" height="160" alt="image" src="https://github.com/user-attachments/assets/e01311a6-91c6-448d-9518-277b299690aa" />
+<img width="488" height="160" alt="Fiscal Year Dashboard" src="https://github.com/user-attachments/assets/e01311a6-91c6-448d-9518-277b299690aa"/>
 
-### Objective
-Analyze yearly sales performance along with product distribution across different fiscal years.
+## Objective
+
+Analyze yearly sales performance and product distribution across different fiscal years.
 
 ### Features
-- Fiscal Year Sales Analysis
+
+- Fiscal Year Sales
 - Product Count
 - Distinct Products Sold
 - Matrix Visualization
-- Fiscal Year Comparison
+- Year-over-Year Comparison
 
-### DAX Used
+### DAX Functions Used
 
 ```DAX
 SUM()
+
 COUNT()
+
 DISTINCTCOUNT()
+
 IF()
+
 CALCULATE()
 ```
 
 ### Business Insight
 
-Provides year-over-year sales trends and product distribution, allowing stakeholders to evaluate product adoption and revenue growth across fiscal years.
+Provides year-over-year sales trends while helping stakeholders understand product growth and revenue distribution.
 
 ---
 
-## 📄 Page 3 – Currency Exchange Analysis
+# 📄 Page 3 — Currency Exchange Analysis
 
-<img width="1326" height="574" alt="image" src="https://github.com/user-attachments/assets/b072b31a-86de-422a-a418-ed2cc39ccfc5" />
+<img width="1326" height="574" alt="Currency Dashboard" src="https://github.com/user-attachments/assets/b072b31a-86de-422a-a418-ed2cc39ccfc5"/>
 
+## Objective
 
-### Objective
-
-Analyze sales using multiple currencies and historical exchange rates through interactive slicers.
+Analyze sales using multiple currencies and historical exchange rates.
 
 ### Features
 
-- Currency Selection
+- Currency Slicer
 - Date Slicer
-- Daily Sales Analysis
 - Exchange Rate Analysis
-- Dynamic Matrix Visual
+- Daily Sales Analysis
+- Dynamic Matrix Report
 
-### DAX Used
+### DAX Functions Used
 
 ```DAX
 SUM()
+
 AVERAGE()
+
 CALCULATE()
 ```
 
 ### Business Insight
 
-This report allows users to analyze daily sales alongside exchange rates for different currencies. It demonstrates relationship modeling between Sales, Date, and Currency Rate tables and showcases dynamic filtering using slicers.
+Demonstrates relationship modeling between Sales, Date, and Currency Rate tables while enabling dynamic currency-based reporting.
 
 ---
 
-## 📄 Page 4 – Monthly Distribution using Power Query
+# 📄 Page 4 — Monthly Distribution using Power Query
 
-<img width="870" height="602" alt="image" src="https://github.com/user-attachments/assets/7ce5703a-d57f-4d8e-aba2-2e09d9724a65" />
+<img width="870" height="602" alt="Power Query Dashboard" src="https://github.com/user-attachments/assets/7ce5703a-d57f-4d8e-aba2-2e09d9724a65"/>
 
+## Objective
 
-### Objective
-
-Generate monthly distribution records from a single penalty record using Power Query transformations.
+Generate monthly records from a single penalty record using Power Query transformations.
 
 ### Features
 
 - Monthly Record Generation
 - Cooling Period Calculation
-- Penalty End Calculation
+- Penalty End Date Calculation
 - Dynamic Date Expansion
-- ETL Transformation using Power Query
+- ETL Transformation
 
 ### Power Query Functions Used
 
@@ -191,11 +267,24 @@ Table.TransformColumnTypes()
 
 ### Business Insight
 
-A single penalty record is expanded into multiple monthly records based on the Cooling Period. The Penalty End date is automatically calculated as the last day of the final cooling month. This demonstrates real-world ETL data transformation techniques using Power Query.
+Demonstrates real-world ETL transformations where a single business record is expanded into multiple monthly records using Power Query.
 
 ---
 
-# 📈 Skills Demonstrated
+# 📈 Key KPIs
+
+- Total Sales
+- Sales by Country
+- Fiscal Year Sales
+- Product Count
+- Distinct Products Sold
+- Average Exchange Rate
+- Daily Sales
+- Currency-wise Performance
+
+---
+
+# 💡 Skills Demonstrated
 
 - Microsoft Power BI
 - Data Modeling
@@ -204,8 +293,91 @@ A single penalty record is expanded into multiple monthly records based on the C
 - Power Query (M Language)
 - ETL & Data Transformation
 - Interactive Dashboards
-- Matrix Visualizations
-- Relationships
-- Business Intelligence Reporting
+- Business Intelligence
 - Data Visualization
+- Matrix Reports
+- Relationships
+- Currency Analysis
+- Fiscal Year Analysis
 - Excel Data Integration
+
+---
+
+# 📚 Key Concepts Implemented
+
+- Star Schema Modeling
+- One-to-Many Relationships
+- Active Relationships
+- Dynamic Filtering
+- Context Transition
+- Filter Context Manipulation
+- DAX Measures
+- Power Query Transformations
+- Interactive Reporting
+- Business Storytelling
+
+---
+
+# 📖 What I Learned
+
+Throughout this project, I gained practical experience in:
+
+- Designing scalable Power BI data models
+- Building reusable DAX measures
+- Performing ETL transformations using Power Query
+- Creating business-friendly dashboards
+- Working with Star Schema architecture
+- Developing interactive reports using slicers and filters
+- Converting business requirements into visual analytics
+
+---
+
+# 🚀 Future Enhancements
+
+- Drill-through Reports
+- KPI Cards
+- Bookmarks & Navigation
+- Row-Level Security (RLS)
+- Incremental Refresh
+- Performance Optimization
+- Mobile Layout Optimization
+
+---
+
+# 📂 Repository Structure
+
+```
+PowerBI-Sales-Analysis/
+
+│
+
+├── AdventureWorks Dashboard.pbix
+
+├── README.md
+
+└── assets/
+    ├── regional-sales.png
+    ├── fiscal-analysis.png
+    ├── currency-analysis.png
+    └── power-query.png
+```
+
+---
+
+# 👨‍💻 Author
+
+## Sharnam Kansal
+
+**Data Engineer**
+
+Experienced in building modern data solutions using Azure Databricks, Microsoft Fabric, PySpark, SQL, Azure Data Factory, Delta Lake, and Power BI.
+
+📧 **Email:** your-email@example.com
+
+💼 **LinkedIn:** https://linkedin.com/in/your-profile
+
+🐙 **GitHub:** https://github.com/sharnam04
+
+---
+
+## ⭐ If you found this project useful, consider giving it a star!
