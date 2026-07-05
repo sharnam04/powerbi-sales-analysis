@@ -372,9 +372,9 @@ PowerBI-Sales-Analysis/
 
 Experienced in building modern data solutions using Azure Databricks, Microsoft Fabric, PySpark, SQL, Azure Data Factory, Delta Lake, and Power BI.
 
-📧 **Email:** your-email@example.com
+📧 **Email:** kansalsharnam0403@gmail.com
 
-💼 **LinkedIn:** https://linkedin.com/in/your-profile
+💼 **LinkedIn:** https://www.linkedin.com/in/sharnam-kansal-4b1018225/
 
 🐙 **GitHub:** https://github.com/sharnam04
 
